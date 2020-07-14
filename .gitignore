@@ -1,0 +1,6 @@
+.vscode/
+composer.phar
+/vendor/
+tests/index.php
+tests/coverage
+.phpunit.result.cache
