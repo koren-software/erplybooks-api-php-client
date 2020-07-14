@@ -9,14 +9,13 @@
 
 namespace Koren\ErplyBooks\Tests;
 
-use Http\Client\HttpClient;
 use GuzzleHttp\Psr7\Request;
-use Koren\ErplyBooks\Client;
-use GuzzleHttp\Psr7\Response;
-use InvalidArgumentException;
-use Psr\Http\Message\RequestInterface;
-use Koren\ErplyBooks\Resource\BaseResource;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Client\HttpClient;
+use InvalidArgumentException;
+use Koren\ErplyBooks\Client;
+use Koren\ErplyBooks\Resource\BaseResource;
+use Psr\Http\Message\RequestInterface;
 
 final class ClientTest extends BaseTest
 {

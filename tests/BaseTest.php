@@ -10,10 +10,10 @@
 namespace Koren\ErplyBooks\Tests;
 
 use Exception;
-use Koren\ErplyBooks\Client;
-use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Handler\MockHandler;
 use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Koren\ErplyBooks\Client;
+use PHPUnit\Framework\TestCase;
 
 abstract class BaseTest extends TestCase
 {

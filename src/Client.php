@@ -8,13 +8,11 @@
 
 namespace Koren\ErplyBooks;
 
+use Http\Adapter\Guzzle6\Client as GuzzleClient;
 use Http\Client\HttpClient;
 use InvalidArgumentException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Resolve\Api\Client\Factory\ResourceFactory;
-use Http\Adapter\Guzzle6\Client as GuzzleClient;
-use Resolve\Api\Client\Factory\FactoryInterface;
 
 /**
  * Erply Books API PHP client Client class
@@ -200,6 +198,7 @@ class Client
      *
      * @throws \InvalidArgumentException if resource is not found
      * @ignore
+     * @SuppressWarnings(PHPMD.MissingImport)
      */
     public function __call($name, $args)
     {

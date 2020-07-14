@@ -9,12 +9,12 @@
 
 namespace Koren\ErplyBooks\Resource;
 
-use RuntimeException;
 use GuzzleHttp\Psr7\Request;
 use Koren\ErplyBooks\Client;
-use Koren\ErplyBooks\Response\Response;
 use Koren\ErplyBooks\Response\ItemResponse;
 use Koren\ErplyBooks\Response\ItemsResponse;
+use Koren\ErplyBooks\Response\Response;
+use RuntimeException;
 
 /**
  * Resource base class
@@ -139,16 +139,16 @@ abstract class BaseResource
     /**
      * PUT query
      *
-     * @param int $id
+     * @param int $itemId
      * @param array $data
      *
      * @return \Koren\ErplyBooks\Response\ItemResponse
      */
-    public function put(int $id, $data = []) : ItemResponse
+    public function put(int $itemId, $data = []) : ItemResponse
     {
         return new ItemResponse(
             $this->getClient()->sendRequest(
-                new Request('PUT', $this->getEndpointUrl().'/'.$id, [], $data)
+                new Request('PUT', $this->getEndpointUrl().'/'.$itemId, [], $data)
             )
         );
     }
@@ -156,15 +156,15 @@ abstract class BaseResource
     /**
      * DELETE query
      *
-     * @param int $id
+     * @param int $itemId
      *
      * @return \Koren\ErplyBooks\Response\ItemResponse
      */
-    public function delete(int $id) : ItemResponse
+    public function delete(int $itemId) : ItemResponse
     {
         return new ItemResponse(
             $this->getClient()->sendRequest(
-                new Request('DELETE', $this->getEndpointUrl().'/'.$id)
+                new Request('DELETE', $this->getEndpointUrl().'/'.$itemId)
             )
         );
     }

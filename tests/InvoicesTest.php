@@ -9,9 +9,9 @@
 
 namespace Koren\ErplyBooks\Tests;
 
+use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use Koren\ErplyBooks\Response\ItemResponse;
 use Koren\ErplyBooks\Response\ItemsResponse;
-use GuzzleHttp\Psr7\Response as GuzzleResponse;
 
 final class InvoicesTest extends BaseTest
 {
