@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['7.2', '7.3', '7.4']
+        php-versions: ['7.3', '7.4']
 
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
@@ -24,10 +24,10 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-interaction --no-progress --no-suggest --ignore-platform-reqs
     - name: PHP Code Sniffer
-      if: matrix.php-versions == '7.2'
+      if: matrix.php-versions == '7.3'
       run: composer phpcs
     - name: PHP Mess Detector
-      if: matrix.php-versions == '7.2'
+      if: matrix.php-versions == '7.3'
       run: composer phpmd
     - name: PHP Unit Tests
       run: composer test
