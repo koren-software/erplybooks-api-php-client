@@ -5,6 +5,12 @@
 
 # [Erply Books API](https://www.erplybooks.com/api/) PHP client
 
+## Install
+
+````bash
+composer require koren-software/erplybooks-api-php-client
+````
+
 ## Usage
 
 ```php
