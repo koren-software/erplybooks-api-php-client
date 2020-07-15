@@ -44,6 +44,15 @@ final class ResourceTest extends BaseTest
 
         // Is iterable
         $this->count(1, iterator_to_array($response));
+
+        $this->mockHandler->append(new GuzzleResponse(200, [], $this->getFixture('invoices-get-many-null.json')));
+
+        /** @var \Koren\ErplyBooks\Response\ItemsResponse $response */
+        $response = $invoices->get([
+            'limit' => 500
+        ]);
+
+        $this->assertInstanceOf(ItemsResponse::class, $response);
     }
 
     public function testGetOne()

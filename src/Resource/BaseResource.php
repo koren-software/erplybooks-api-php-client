@@ -113,7 +113,7 @@ abstract class BaseResource
         );
 
         $body = json_decode($response->getBody());
-        if (isset($body->items)) {
+        if (property_exists($body, 'items')) {
             return new ItemsResponse($response);
         }
 
