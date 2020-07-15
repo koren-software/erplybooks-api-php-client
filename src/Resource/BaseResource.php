@@ -135,7 +135,7 @@ abstract class BaseResource
                     'POST',
                     $this->getEndpointUrl(),
                     ['Content-Type' => 'application/json'],
-                    \GuzzleHttp\Psr7\stream_for(http_build_query($data))
+                    json_encode($data)
                 )
             )
         );
@@ -157,7 +157,7 @@ abstract class BaseResource
                     'PUT',
                     $this->getEndpointUrl().'/'.$itemId,
                     ['Content-Type' => 'application/json'],
-                    \GuzzleHttp\Psr7\stream_for(http_build_query($data))
+                    json_encode($data)
                 )
             )
         );
