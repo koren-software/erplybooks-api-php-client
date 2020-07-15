@@ -9,6 +9,7 @@
 
 namespace Koren\ErplyBooks\Resource\Traits;
 
+use ReflectionClass;
 use BadMethodCallException;
 use Koren\ErplyBooks\Response\ItemResponse;
 
@@ -30,7 +31,7 @@ trait NoDelete
     public function delete(int $itemId, $data = []) : ItemResponse
     {
         throw new BadMethodCallException(
-            'DELETE request is not supported on '.(new \ReflectionClass($this))->getShortName().' resource.'
+            'DELETE request is not supported on '.(new ReflectionClass($this))->getShortName().' resource.'
         );
     }
 }

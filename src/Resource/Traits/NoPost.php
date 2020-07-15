@@ -9,6 +9,7 @@
 
 namespace Koren\ErplyBooks\Resource\Traits;
 
+use ReflectionClass;
 use BadMethodCallException;
 use Koren\ErplyBooks\Response\ItemResponse;
 
@@ -31,7 +32,7 @@ trait NoPost
     public function post($data = []) : ItemResponse
     {
         throw new BadMethodCallException(
-            'POST request is not supported on '.(new \ReflectionClass($this))->getShortName().' resource.'
+            'POST request is not supported on '.(new ReflectionClass($this))->getShortName().' resource.'
         );
     }
 }
