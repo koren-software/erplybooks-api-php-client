@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/koren-software/erplybooks-api-php-client/v/stable)](https://packagist.org/packages/koren-software/erplybooks-api-php-client)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-# Erply Books API PHP client
+# [Erply Books API](https://www.erplybooks.com/api/) PHP client
 
 ## Usage
 
