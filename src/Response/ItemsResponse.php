@@ -66,33 +66,21 @@ class ItemsResponse extends Response implements \Iterator
         return $this->items[$this->position];
     }
 
-    /**
-     * @ignore
-     */
     public function key()
     {
         return $this->position;
     }
 
-    /**
-     * @ignore
-     */
     public function next()
     {
         ++$this->position;
     }
 
-    /**
-     * @ignore
-     */
     public function rewind()
     {
         $this->position = 0;
     }
 
-    /**
-     * @ignore
-     */
     public function valid()
     {
         return isset($this->items[$this->position]);
