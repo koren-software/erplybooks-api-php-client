@@ -1,0 +1,15 @@
+{
+    "exceptionType": "DataConflictException",
+    "statusCode": 409,
+    "exception": {
+        "messages": [
+            {
+                "params": null,
+                "messageCode": "Item not Found"
+            }
+        ],
+        "errorTypeCode": null,
+        "params": null
+    },
+    "message": null
+}

@@ -43,6 +43,11 @@ final class ClientTest extends BaseTest
         );
     }
 
+    public function testCanGetToken()
+    {
+        $this->assertEquals($this->token, $this->client->getApiToken());
+    }
+
     /**
       * Test can get client from resource
       *

@@ -86,7 +86,7 @@ class ItemResponse extends Response
      */
     public function __get($name)
     {
-        if ($this->item->{$name}) {
+        if (isset($this->item->{$name})) {
             return $this->item->{$name};
         }
 

@@ -111,31 +111,16 @@ class Client
     {
         $credentials = ['token' => $this->token];
 
-        switch ($request->getHeaderLine('content-type')) {
-            case 'application/x-www-form-urlencoded':
-                $body = $request->getBody();
-                $body->rewind();
-                $content = $body->getContents();
-                $params = [];
-                parse_str($content, $params);
-                $params = array_merge((array)$params, $credentials);
-                $body->rewind();
-                $body->write(http_build_query($params, null, '&'));
-                break;
-            default:
-                $request->withHeader('Content-Type', 'application/json');
-                $body = $request->getBody();
-                $body->rewind();
-                $content = $body->getContents();
-                $params = json_decode($content, true);
-                $params = array_merge((array)$params, $credentials);
-                $body->rewind();
-                $body->write(json_encode($params));
-                break;
-        }
+        $request = $request->withHeader('Content-Type', 'application/json');
+        $body = $request->getBody();
+        $body->rewind();
+        $content = $body->getContents();
+        $params = json_decode($content, true);
+        $params = array_merge((array)$params, $credentials);
+        $body->rewind();
+        $body->write(json_encode($params));
 
         $request = $request->withHeader('Accept', 'application/json');
-        $request = $request->withHeader('Content-Type', 'application/json');
 
         return $request;
     }

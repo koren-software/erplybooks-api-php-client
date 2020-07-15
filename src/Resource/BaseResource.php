@@ -131,7 +131,12 @@ abstract class BaseResource
     {
         return new ItemResponse(
             $this->getClient()->sendRequest(
-                new Request('POST', $this->getEndpointUrl(), [], $data)
+                new Request(
+                    'POST',
+                    $this->getEndpointUrl(),
+                    ['Content-Type' => 'application/json'],
+                    \GuzzleHttp\Psr7\stream_for(http_build_query($data))
+                )
             )
         );
     }
@@ -148,7 +153,12 @@ abstract class BaseResource
     {
         return new ItemResponse(
             $this->getClient()->sendRequest(
-                new Request('PUT', $this->getEndpointUrl().'/'.$itemId, [], $data)
+                new Request(
+                    'PUT',
+                    $this->getEndpointUrl().'/'.$itemId,
+                    ['Content-Type' => 'application/json'],
+                    \GuzzleHttp\Psr7\stream_for(http_build_query($data))
+                )
             )
         );
     }

@@ -18,6 +18,8 @@ use PHPUnit\Framework\TestCase;
 abstract class BaseTest extends TestCase
 {
     protected $token;
+
+    /** @var \Koren\ErplyBooks\Client $client */
     protected $client;
     protected $mockHandler;
 
