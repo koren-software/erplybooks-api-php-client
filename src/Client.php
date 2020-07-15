@@ -109,18 +109,12 @@ class Client
      */
     public function authenticate(RequestInterface $request) : RequestInterface
     {
-        $credentials = ['token' => $this->token];
-
         $request = $request->withHeader('Content-Type', 'application/json');
-        $body = $request->getBody();
-        $body->rewind();
-        $content = $body->getContents();
-        $params = json_decode($content, true);
-        $params = array_merge((array)$params, $credentials);
-        $body->rewind();
-        $body->write(json_encode($params));
-
         $request = $request->withHeader('Accept', 'application/json');
+
+        $this->withQuery([
+            'token' => $this->token
+        ]);
 
         return $request;
     }
