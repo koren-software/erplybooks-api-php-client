@@ -1,6 +1,7 @@
 [![Actions Status](https://github.com/koren-software/erplybooks-api-php-client/workflows/build/badge.svg)](https://github.com/koren-software/erplybooks-api-php-client/actions)
 [![Coverage Status](https://coveralls.io/repos/koren-software/erplybooks-api-php-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/koren-software/erplybooks-api-php-client?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/koren-software/erplybooks-api-php-client/v/stable)](https://packagist.org/packages/koren-software/erplybooks-api-php-client)
+[![Total Downloads](https://poser.pugx.org/koren-software/erplybooks-api-php-client/downloads)](https://packagist.org/packages/koren-software/erplybooks-api-php-client)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 # [Erply Books API](https://www.erplybooks.com/api/) PHP client
