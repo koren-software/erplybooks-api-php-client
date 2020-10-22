@@ -74,7 +74,7 @@ final class ResourceTest extends BaseTest
         $this->isJson($response->__toString());
 
         // Can get data
-        $this->assertEquals(1, $response->id);
+        $this->assertSame(1, $response->id);
         $this->assertFalse($response->notExistingProperty);
         $this->assertTrue(isset($response->id));
     }
@@ -154,8 +154,8 @@ final class ResourceTest extends BaseTest
         $this->assertInstanceOf(ItemResponse::class, $response);
 
         $error =$response->getError();
-        $this->assertEquals('DataConflictException', $error->exceptionType);
+        $this->assertSame('DataConflictException', $error->exceptionType);
         $this->assertObjectHasAttribute('messages', $error->exception);
-        $this->assertEquals('Item not Found', $error->exception->messages[0]->messageCode);
+        $this->assertSame('Item not Found', $error->exception->messages[0]->messageCode);
     }
 }
