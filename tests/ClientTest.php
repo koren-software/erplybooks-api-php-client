@@ -89,12 +89,12 @@ final class ClientTest extends BaseTest
             $request->hasHeader('Content-Type')
         );
 
-        $this->assertEquals(
+        $this->assertSame(
             $request->getHeader('Accept')[0],
             'application/json'
         );
 
-        $this->assertEquals(
+        $this->assertSame(
             $request->getHeader('Content-Type')[0],
             'application/json'
         );
