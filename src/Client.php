@@ -8,7 +8,7 @@
 
 namespace Koren\ErplyBooks;
 
-use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Adapter\Guzzle7\Client as GuzzleClient;
 use Http\Client\HttpClient;
 use InvalidArgumentException;
 use Psr\Http\Message\RequestInterface;

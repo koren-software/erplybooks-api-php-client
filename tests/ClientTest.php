@@ -10,7 +10,7 @@
 namespace Koren\ErplyBooks\Tests;
 
 use GuzzleHttp\Psr7\Request;
-use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Adapter\Guzzle7\Client as GuzzleClient;
 use Http\Client\HttpClient;
 use InvalidArgumentException;
 use Koren\ErplyBooks\Client;

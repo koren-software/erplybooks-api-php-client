@@ -11,7 +11,7 @@ namespace Koren\ErplyBooks\Tests;
 
 use Exception;
 use GuzzleHttp\Handler\MockHandler;
-use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Adapter\Guzzle7\Client as GuzzleClient;
 use Koren\ErplyBooks\Client;
 use PHPUnit\Framework\TestCase;
 
