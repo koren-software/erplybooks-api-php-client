@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
@@ -103,7 +103,7 @@ abstract class BaseResource
         // Get certain item by ID
         if (is_int($parameters)) {
             $url .= '/'.$parameters;
-        // Get items by parameters
+            // Get items by parameters
         } elseif (is_array($parameters)) {
             $client = $client->withQuery($parameters);
         }

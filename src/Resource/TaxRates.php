@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 

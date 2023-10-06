@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
@@ -53,7 +53,7 @@ class ItemResponse extends Response
      *
      * @return int Count of items
      */
-    public function count()
+    public function count() : int
     {
         return $this->getItem() ? 1 : 0;
     }
@@ -63,7 +63,7 @@ class ItemResponse extends Response
      *
      * @return object Item
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : mixed
     {
         return $this->getItem();
     }

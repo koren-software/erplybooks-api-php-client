@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
@@ -155,7 +155,7 @@ final class ResourceTest extends BaseTest
 
         $error =$response->getError();
         $this->assertEquals('DataConflictException', $error->exceptionType);
-        $this->assertObjectHasAttribute('messages', $error->exception);
+        $this->assertObjectHasProperty('messages', $error->exception);
         $this->assertEquals('Item not Found', $error->exception->messages[0]->messageCode);
     }
 }

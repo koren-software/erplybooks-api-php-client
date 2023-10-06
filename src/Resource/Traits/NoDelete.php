@@ -3,15 +3,15 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
 namespace Koren\ErplyBooks\Resource\Traits;
 
-use ReflectionClass;
 use BadMethodCallException;
 use Koren\ErplyBooks\Response\ItemResponse;
+use ReflectionClass;
 
 /**
  * Trait that denies DELETE requests

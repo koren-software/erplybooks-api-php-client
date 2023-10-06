@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
@@ -28,14 +28,14 @@ interface ResponseInterface extends \Countable, \JsonSerializable
      *
      * @return int Count of items
      */
-    public function count();
+    public function count() : int;
 
     /**
      * JsonSerializable
      *
      * @return object Item
      */
-    public function jsonSerialize();
+    public function jsonSerialize() : mixed;
 
     /**
      * Magic method so we can still call original response methods

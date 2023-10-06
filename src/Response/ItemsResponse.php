@@ -3,7 +3,7 @@
  * Erply Books API PHP client
  *
  * @author Rene Korss <rene@koren.ee>
- * @copyright Copyright (c) 2020 Rene Korss (https://koren.ee)
+ * @copyright Copyright (c) 2023 Rene Korss (https://koren.ee)
  * @license MIT
  */
 
@@ -61,27 +61,27 @@ class ItemsResponse extends Response implements \Iterator
      *
      * @ignore
      */
-    public function current()
+    public function current() : mixed
     {
         return $this->items[$this->position];
     }
 
-    public function key()
+    public function key() : mixed
     {
         return $this->position;
     }
 
-    public function next()
+    public function next() : void
     {
         ++$this->position;
     }
 
-    public function rewind()
+    public function rewind() : void
     {
         $this->position = 0;
     }
 
-    public function valid()
+    public function valid() : bool
     {
         return isset($this->items[$this->position]);
     }
@@ -91,7 +91,7 @@ class ItemsResponse extends Response implements \Iterator
      *
      * @return int Count of items
      */
-    public function count()
+    public function count() : int
     {
         return count($this->items);
     }
@@ -101,7 +101,7 @@ class ItemsResponse extends Response implements \Iterator
      *
      * @return array Items
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : mixed
     {
         return $this->getItems();
     }
