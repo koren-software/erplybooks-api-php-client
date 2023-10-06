@@ -40,7 +40,7 @@
             "@docs"
         ],
         "format": "./vendor/bin/php-cs-fixer fix",
-        "test": "./vendor/bin/phpunit tests",
+        "test": "./vendor/bin/phpunit",
         "phpmd": "./vendor/bin/phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
         "phpcs": "./vendor/bin/phpcs --standard=PSR2 src/",
         "docs": "apigen generate src --destination docs"
